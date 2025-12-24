@@ -109,6 +109,9 @@ body {
 /* =========================
    BANNER (DESKTOP)
 ========================= */
+/* =========================
+   BANNER (DESKTOP)
+========================= */
 .banner {
   min-height: 100vh;
   background:
@@ -119,6 +122,21 @@ body {
   align-items: center;
   padding: 6%;
 }
+
+/* =========================
+   BANNER (MOBILE – NÃO CORTA O ROSTO)
+========================= */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 100vh;
+
+    background:
+      linear-gradient(to top, rgba(13,11,16,0.88) 40%, transparent),
+      linear-gradient(to right, rgba(13,11,16,0.9) 55%, transparent),
+      url("banner.jpg") top center / cover no-repeat;
+  }
+}
+
 
 .banner-content {
   max-width: 520px;
@@ -355,3 +373,4 @@ body {
   color: var(--muted);
   margin-bottom: 12px;
 }
+
