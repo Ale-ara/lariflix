@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
         introSound.play().catch(() => {});
       }
 
-      setTimeout(() => intro.style.opacity = "0", 3500);
+      setTimeout(() => {
+        intro.style.opacity = "0";
+      }, 3500);
 
       setTimeout(() => {
         intro.style.display = "none";
@@ -61,23 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =====================================================
-     HISTÓRIAS DOS EPISÓDIOS
+     HISTÓRIAS DOS EPISÓDIOS (ARQUIVOS NA RAIZ)
   ===================================================== */
   const storyEp1 = [
     {
       title: "Como tudo começou",
-      img: "assets/images/story/ep1-1.jpg",
+      img: "ep1-1.jpg",
       text: "Tudo começou com mensagens simples… Com aquela \"enrolação\", de ir na igreja da dona Larissa."
     },
     {
       title: "O time",
-      img: "assets/images/story/ep1-2.jpg",
-      text: "Quando você queria saber o quanto antes se seria mais tranquilo saber do time, quando chegasse a hora de conversar com seu pai."
+      img: "ep1-2.jpg",
+      text: "Quando você queria saber o quanto antes se seria mais tranquilo saber do time."
     },
     {
       title: "Quando percebi",
       img: null,
-      text: "Eu já estava completamente apaixonado. Só queria conversar e estar junto, mas precisei me conter."
+      text: "Eu já estava completamente apaixonado. Só queria conversar e estar junto."
     },
     {
       title: "E hoje",
@@ -89,13 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const storyEp2 = [
     {
       title: "Mais próximos",
-      img: "assets/images/story/ep2-1.jpg",
-      text: "Conhecer a família foi um privilégio. Minha mente já caminhava para o futuro e tudo o que ainda vamos construir."
+      img: "ep2-1.jpg",
+      text: "Conhecer a família foi um privilégio. Minha mente já caminhava para o futuro."
     },
     {
       title: "Emoção",
-      img: "assets/images/story/ep2-2.jpg",
-      text: "Acabei me emocionando ao rever essas lembranças. E sim, sem barba você gosta mais, né? 😂"
+      img: "ep2-2.jpg",
+      text: "Me emocionei ao rever essas lembranças. E sim… sem barba você gosta mais 😅"
     },
     {
       title: "Um amor",
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Não vamos parar…",
-      video: "assets/videos/ep2-video.mp4",
+      video: "ep2-video.mp4",
       text: "E isso é só o começo das nossas histórias."
     }
   ];
@@ -112,40 +114,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const storyEp3 = [
     {
       title: "Rotina",
-      img: "assets/images/story/ep3-1.jpg",
+      img: "ep3.jpg",
       text: "Os dias passaram a ter você."
     },
     {
       title: "Cuidado",
-      img: "assets/images/story/ep3-2.jpg",
+      img: "ep3.jpg",
       text: "Cada detalhe importava."
     },
     {
       title: "Sentimento",
-      img: "assets/images/story/ep3-3.jpg",
+      img: "ep3.jpg",
       text: "Já não era só conversa."
     },
     {
       title: "Certeza",
       img: null,
-      text: "Era sentimento, era escolha."
+      text: "Era sentimento. Era escolha."
     }
   ];
 
   const storyEp4 = [
     {
       title: "Nós",
-      img: "assets/images/story/ep4-1.jpg",
+      img: "ep4.jpg",
       text: "Momentos simples que ficaram."
     },
     {
       title: "Companheirismo",
-      img: "assets/images/story/ep4-2.jpg",
+      img: "ep4.jpg",
       text: "Aprendendo a caminhar juntos."
     },
     {
       title: "Construção",
-      img: "assets/images/story/ep4-3.jpg",
+      img: "ep4.jpg",
       text: "Planejando o futuro."
     },
     {
@@ -171,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModal = document.getElementById("closeModal");
   const modalContent = document.querySelector(".modal-content");
   const indicator = document.getElementById("stepIndicator");
-  const progressFill = document.getElementById("progressFill");
 
   /* =====================================================
      EFEITO DE DIGITAÇÃO
@@ -197,11 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modalTitle.innerText = data.title;
       indicator.innerText = `Parte ${step + 1} / ${currentStory.length}`;
-
-      if (progressFill) {
-        progressFill.style.width =
-          ((step + 1) / currentStory.length) * 100 + "%";
-      }
 
       modalText.innerHTML = "";
 
