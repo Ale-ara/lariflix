@@ -114,7 +114,7 @@ body {
   background:
     linear-gradient(to top, var(--bg-dark) 25%, transparent),
     linear-gradient(to right, var(--bg-dark) 30%, transparent),
-    url("../images/banner.jpg") center / cover no-repeat;
+    url("banner.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 6%;
@@ -411,3 +411,4 @@ body {
     object-fit: cover;
   }
 }
+
