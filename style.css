@@ -26,7 +26,7 @@ body {
 }
 
 /* =========================
-   INTRO (BOTÃO + ANIMAÇÃO)
+   INTRO
 ========================= */
 #intro {
   position: fixed;
@@ -107,13 +107,13 @@ body {
 }
 
 /* =========================
-   BANNER
+   BANNER (DESKTOP)
 ========================= */
 .banner {
   min-height: 100vh;
   background:
-    linear-gradient(to top, var(--bg-dark) 25%, transparent),
-    linear-gradient(to right, var(--bg-dark) 30%, transparent),
+    linear-gradient(to top, rgba(13,11,16,0.85) 25%, transparent),
+    linear-gradient(to right, rgba(13,11,16,0.85) 30%, transparent),
     url("banner.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -196,16 +196,10 @@ body {
 
 .thumb {
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.thumb {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
-
 
 .thumb img {
   width: 100%;
@@ -231,27 +225,16 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 14px;
-  opacity: 1; /* SEMPRE VISÍVEL */
-  transition: opacity 0.3s ease;
 }
 
-.overlay h3 {
-  font-size: 0.95rem;
-  margin-bottom: 4px;
+.overlay h3,
+.overlay span {
   color: #fff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 
 .overlay span {
   font-size: 0.75rem;
-  color: #ddd;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
-}
-
-
-.episode:hover .overlay,
-.episode.locked .overlay {
-  opacity: 1;
 }
 
 .episode.locked img {
@@ -259,7 +242,7 @@ body {
 }
 
 /* =========================
-   MODAL FULLSCREEN
+   MODAL
 ========================= */
 .modal {
   position: fixed;
@@ -282,63 +265,42 @@ body {
   max-height: 90vh;
   overflow-y: auto;
   text-align: center;
-  padding-bottom: 20px;
   animation: modalFade 0.5s ease;
 }
 
-.modal-content h2 {
-  color: var(--rose);
-  margin-bottom: 20px;
-}
-
-.modal-content p {
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #ddd;
-}
-
-/* imagem do modal (prints) */
-.modal-image {
+.modal-image,
+.modal-video {
   width: 100%;
   max-height: 45vh;
   object-fit: contain;
-  margin: 16px 0;
   border-radius: 10px;
+  margin: 16px 0;
 }
 
-/* botões do modal */
 .modal-controls {
   display: flex;
-  justify-content: space-between;
   gap: 12px;
   margin-top: 20px;
 }
 
 .modal-controls button {
   flex: 1;
-  padding: 12px 0;
+  padding: 12px;
   background: rgba(255,255,255,0.15);
   border: none;
   color: #fff;
-  font-size: 0.95rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.modal-controls button:hover {
-  background: rgba(255,255,255,0.25);
 }
 
 .close-modal {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: transparent;
+  font-size: 1.4rem;
+  background: none;
   border: none;
   color: #fff;
-  font-size: 1.4rem;
-  cursor: pointer;
 }
 
 @keyframes modalFade {
@@ -357,23 +319,18 @@ body {
 }
 
 /* =========================
-   TRANSIÇÃO ENTRE PARTES
-========================= */
-.fade-slide {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.fade-slide.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================
-   RESPONSIVO
+   MOBILE AJUSTES (IMPORTANTE)
 ========================= */
 @media (max-width: 768px) {
+
+  /* 🔥 CORREÇÃO DO BANNER MOBILE */
+  .banner {
+    background:
+      linear-gradient(to top, rgba(13,11,16,0.85) 35%, transparent),
+      linear-gradient(to right, rgba(13,11,16,0.85) 45%, transparent),
+      url("banner.jpg") right center / cover no-repeat;
+  }
+
   .banner-content h1 {
     font-size: 2.4rem;
   }
@@ -381,24 +338,6 @@ body {
   .nav {
     display: none;
   }
-}
-
-@media (max-width: 480px) {
-  .modal-content h2 {
-    font-size: 1.4rem;
-  }
-
-  .modal-content p {
-    font-size: 0.95rem;
-  }
-}
-.step-indicator {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-
-@media (max-width: 768px) {
 
   .episodes {
     grid-template-columns: repeat(2, 1fr);
@@ -406,9 +345,13 @@ body {
   }
 
   .thumb img {
+    aspect-ratio: 3 / 4;
     height: auto;
-    aspect-ratio: 3 / 4; /* estilo Netflix mobile */
-    object-fit: cover;
   }
 }
 
+.step-indicator {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
