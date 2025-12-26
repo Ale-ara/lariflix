@@ -137,17 +137,17 @@ document.addEventListener("DOMContentLoaded", () => {
 const storyEp4 = [
   {
     title: "Nós",
-    img: "ep4.jpg",
+    img: "ep5.jpg",
     text: "Nem todo dia é leve. Às vezes a gente erra, se perde, se desencontra. Mas é exatamente nesses momentos que a gente aprende a cuidar melhor um do outro, a ouvir mais e a estar mais presente."
   },
   {
     title: "Consciência",
-    img: "ep4.jpg",
+    img: null,
     text: "Hoje eu entendi algo importante: não avisar não é falta de amor, mas machuca quem ama. E perceber isso me fez querer ser melhor por você."
   },
   {
     title: "Cuidado",
-    img: "ep4.jpg",
+    img: null,
     text: "Quero que você se sinta segura, incluída e importante em tudo que faz parte da minha vida. Porque você é a minha maior razão, o melhor presente que Papai do Céu me deu, e eu me sinto muito privilegiado por ter você."
   },
   {
@@ -283,4 +283,5 @@ const storyEp4 = [
   });
 
 });
+
 
