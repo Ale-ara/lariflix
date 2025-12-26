@@ -112,27 +112,27 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const storyEp3 = [
-    {
-      title: "Rotina",
-      img: "ep3.jpg",
-      text: "Os dias passaram a ter você."
-    },
-    {
-      title: "Cuidado",
-      img: "ep3.jpg",
-      text: "Cada detalhe importava."
-    },
-    {
-      title: "Sentimento",
-      img: "ep3.jpg",
-      text: "Já não era só conversa."
-    },
-    {
-      title: "Certeza",
-      img: null,
-      text: "Era sentimento. Era escolha."
-    }
-  ];
+  {
+    title: "Nós",
+    img: "ep5.jpg",
+    text: "Nem todo dia é leve. Às vezes a gente erra, se perde, se desencontra. Mas é exatamente nesses momentos que a gente aprende a cuidar melhor um do outro, a ouvir mais e a estar mais presente."
+  },
+  {
+    title: "Consciência",
+    img: null,
+    text: "Hoje eu entendi algo importante: não avisar não é falta de amor, mas machuca quem ama. E perceber isso me fez querer ser melhor por você."
+  },
+  {
+    title: "Cuidado",
+    img: null,
+    text: "Quero que você se sinta segura, incluída e importante em tudo que faz parte da minha vida. Porque você é a minha maior razão, o melhor presente que Papai do Céu me deu, e eu me sinto muito privilegiado por ter você."
+  },
+  {
+    title: "Escolha",
+    img: null,
+    text: "E por isso, todos os dias, eu escolho amar você. Com atitudes, com cuidado e com presença."
+  }
+];
 
 const storyEp4 = [
   {
@@ -283,5 +283,6 @@ const storyEp4 = [
   });
 
 });
+
 
 
