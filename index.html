@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>LariFlix ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0b10">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -15,7 +16,7 @@
 <div id="intro">
   <img src="logo.png" alt="LariFlix" class="intro-logo">
 
-  <button id="startBtn" class="start-btn">
+  <button id="startBtn" class="start-btn" type="button">
     Iniciar experiência
   </button>
 
@@ -52,8 +53,8 @@
     </p>
 
     <div class="buttons">
-      <button id="btnContinuar" class="btn play">▶ Continuar</button>
-      <button id="btnFavorito" class="btn fav">☆ Favorito</button>
+      <button id="btnContinuar" class="btn play" type="button">▶ Continuar</button>
+      <button id="btnFavorito" class="btn fav" type="button">☆ Favorito</button>
     </div>
   </div>
 </section>
@@ -66,7 +67,7 @@
 
     <div class="episode" data-ep="1">
       <div class="thumb">
-        <img src="ep1.jpg">
+        <img src="ep1.jpg" alt="Capa do episódio 1" loading="lazy">
         <div class="overlay">
           <h3>Episódio 1</h3>
           <span>Disponível</span>
@@ -76,7 +77,7 @@
 
     <div class="episode" data-ep="2">
       <div class="thumb">
-        <img src="ep2.jpg">
+        <img src="ep2.jpg" alt="Capa do episódio 2" loading="lazy">
         <div class="overlay">
           <h3>Episódio 2</h3>
           <span>Disponível</span>
@@ -86,7 +87,7 @@
 
     <div class="episode" data-ep="3">
       <div class="thumb">
-        <img src="ep3.jpg">
+        <img src="ep3.jpg" alt="Capa do episódio 3" loading="lazy">
         <div class="overlay">
           <h3>Episódio 3</h3>
           <span>Disponível</span>
@@ -94,22 +95,22 @@
       </div>
     </div>
 
-    <div class="episode locked" data-ep="4">
+    <div class="episode" data-ep="4">
       <div class="thumb">
-        <img src="ep4.jpg">
+        <img src="ep4.jpg" alt="Capa do episódio 4" loading="lazy">
         <div class="overlay">
           <h3>Episódio 4</h3>
-          <span>Bloqueado</span>
+          <span>Disponível</span>
         </div>
       </div>
     </div>
 
-    <div class="episode locked" data-ep="5">
+    <div class="episode" data-ep="5">
       <div class="thumb">
-        <img src="final.jpg">
+        <img src="final.jpg" alt="Capa do episódio final" loading="lazy">
         <div class="overlay">
           <h3>Episódio Final 🎂</h3>
-          <span>27 de dezembro</span>
+          <span>Disponível · 27 de dezembro</span>
         </div>
       </div>
     </div>
@@ -118,23 +119,43 @@
 </section>
 
 <!-- ================= MODAL ================= -->
-<div id="episodeModal" class="modal">
-  <button class="close-modal" id="closeModal">✕</button>
+<div id="episodeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-topbar">
+    <img src="logo.png" alt="LariFlix" class="modal-brand">
 
-  <div class="modal-content fade-slide">
-    <div id="stepIndicator" class="step-indicator"></div>
+    <div class="modal-top-actions">
+      <a href="#" id="modalHome">Início</a>
+      <a href="#episodios" id="modalEpisodes">Episódios</a>
+      <button class="close-modal" id="closeModal" type="button" aria-label="Fechar episódio">✕</button>
+    </div>
+  </div>
 
-    <h2 id="modalTitle"></h2>
+  <div class="modal-content">
+    <div class="modal-story">
+      <div class="modal-media-frame" id="modalMediaFrame">
+        <video id="modalVideo" class="modal-video" controls playsinline></video>
+        <img id="modalImage" class="modal-image" alt="Imagem da história">
+        <div id="modalPlaceholder" class="modal-placeholder" aria-hidden="true">
+          <span>♡</span>
+        </div>
+      </div>
 
-    <video id="modalVideo" class="modal-video" controls playsinline></video>
+      <div class="modal-copy">
+        <div id="stepIndicator" class="step-indicator"></div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalText" class="modal-text"></p>
 
-    <img id="modalImage" class="modal-image">
+        <div class="story-note">
+          <span class="story-note-icon" aria-hidden="true">♡</span>
+          <p id="modalNote"></p>
+        </div>
+      </div>
+    </div>
 
-    <p id="modalText"></p>
-
-    <div class="modal-controls">
-      <button id="prevStep">← Voltar</button>
-      <button id="nextStep">Próximo →</button>
+    <div class="modal-footer">
+      <button id="prevStep" class="modal-step-button secondary" type="button">← Anterior</button>
+      <div id="stepDots" class="step-dots" aria-label="Etapas do episódio"></div>
+      <button id="nextStep" class="modal-step-button primary" type="button">Próximo →</button>
     </div>
   </div>
 </div>
