@@ -156,8 +156,8 @@ const storyEp4 = [
   {
     title: "Os nossos dias simples",
     img: "ep4-2.png",
-    text: "Eu quero viver mais desses momentos: a gente em casa, dividindo comida, rindo de qualquer coisa e transformando um dia comum em uma lembrança boa.",
-    note: "Com você, até cachorro-quente no sofá vira um dos meus lugares favoritos."
+    text: "Amor, eu quero viver todos esses momentos que parecem "simples" aos olhos de outras pessoas, mas aos meus olhos, e tudo é especial ao seu lado",
+    note: "Com você, é o meu lugar favorito."
   },
   {
     title: "Onde eu quero estar",
@@ -183,13 +183,13 @@ const storyEp5 = [
   {
     title: "A mulher que você se tornou",
     img: "ep5-2.png",
-    text: "Tenho orgulho da mulher que você se tornou: forte, linda, carinhosa e cheia de personalidade. Você continua carregando um pouco daquela menina, mas hoje inspira e transforma quem tem a sorte de estar perto.",
+    text: "Tenho orgulho da mulher que você se tornou e tem se tornado, forte, linda, carinhosa e cheia de personalidade, a minha Larissa que me enche de orgulho todos os dias da minha vida. Amor, e muita das vezes tem passados, algo na infância e ao passar que carregamos para sí, e queremos carregar sozinhos, mas o nosso Deus permitiu, e melhor, me deu esse privilégio de ter você em minha vida, para te abraçar, te beijar, te amar todos os dias, ser seu amigo, ser seu ombro, ser tudo para você, pois você é a flor mais linda do jardim na qual o nosso Deus tem cuidado.",
     note: "Você floresceu sem deixar de ser quem sempre foi."
   },
   {
     title: "O presente que você é",
     video: "ep5-3.mp4",
-    text: "Seu aniversário passou, mas aquilo que eu queria dizer não ficou no passado. Ter você na minha vida é um presente que não cabe em uma única data.",
+    text: "Seu aniversário passou, mas aquilo que eu queria dizer não ficou no passado. Ter você na minha vida é um presente que não cabe em uma única data, é um presente que quero vivenciar todos os dias da minha vida, em noivarmos, casarmos, ter a nossa familia, ter a nossa vida unidos, juntos.",
     note: "Celebrar sua vida é agradecer por você existir e por dividir essa caminhada comigo."
   },
   {
