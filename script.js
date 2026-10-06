@@ -156,7 +156,7 @@ const storyEp4 = [
   {
     title: "Os nossos dias simples",
     img: "ep4-2.png",
-    text: "Amor, eu quero viver todos esses momentos que parecem "simples" aos olhos de outras pessoas, mas aos meus olhos, e tudo é especial ao seu lado",
+    text: "Amor, eu quero viver todos esses momentos que parecem \"simples\" aos olhos de outras pessoas, mas aos meus olhos, e tudo é especial ao seu lado",
     note: "Com você, é o meu lugar favorito."
   },
   {
